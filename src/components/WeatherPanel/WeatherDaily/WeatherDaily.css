@@ -1,0 +1,68 @@
+.weather-daily__title {
+  color: var(--color-text);
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.weather-daily__days {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding: 0.75rem 0.25rem;
+}
+
+.weather-daily__day {
+  min-width: 90px;
+  padding-block: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: 8px;
+  background-color: var(--color-surface);
+}
+
+.weather-daily__weekday {
+  color: var(--color-label);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.weather-daily__icon {
+  width: 64px;
+  height: 64px;
+}
+
+.weather-daily__temps {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.weather-daily__temp--max {
+  color: #f33;
+}
+
+.weather-daily__temp--min {
+  color: #09f;
+}
+
+.weather-daily__metric {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.weather-daily__metric-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.weather-daily__metric-value {
+  color: var(--color-value);
+}
+
+@media (min-width: 700px) {
+  .weather-daily__days {
+    justify-content: center;
+  }
+}

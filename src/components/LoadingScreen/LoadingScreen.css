@@ -1,0 +1,18 @@
+.loading-screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-screen__icon {
+  width: 150px;
+  height: 150px;
+}
+
+.loading-screen__text {
+  color: var(--color-text);
+  font-size: 1.2rem;
+  font-weight: 600;
+}

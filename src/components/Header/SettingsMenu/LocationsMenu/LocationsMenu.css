@@ -1,0 +1,140 @@
+.locations-menu__backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.locations-menu {
+  position: fixed;
+  width: min(95%, 350px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  background-color: var(--color-background);
+  box-shadow: var(--color-shadow);
+  z-index: 2;
+}
+
+.locations-menu__header {
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.locations-menu__title {
+  color: var(--color-text);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.locations-menu__button {
+  height: 24px;
+  width: 24px;
+  border: none;
+  background: none;
+}
+
+.locations-menu__button--close {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+}
+
+.locations-menu__icon {
+  width: 100%;
+  height: 100%;
+  color: var(--color-icon);
+}
+
+.locations-menu__section {
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.locations-menu__section-title {
+  color: var(--color-label);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.locations-menu__current {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.locations-menu__current-name {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 8px;
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.locations-menu__actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.locations-menu__pinned-name {
+  padding: 0.5rem;
+  border-radius: 8px;
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.locations-menu__saved {
+  max-height: 250px;
+  padding-right: 0.25rem;
+  margin-right: -0.25rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style-type: none;
+  scrollbar-width: thin;
+}
+
+.locations-menu__saved-location {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 8px;
+  background-color: var(--color-surface);
+  cursor: pointer;
+}
+
+.locations-menu__saved-name {
+  color: var(--color-text);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .locations-menu__icon--save:hover {
+    color: #f00;
+  }
+
+  .locations-menu__icon--pin:hover {
+    color: #1d5;
+  }
+
+  .locations-menu__saved-location:hover {
+    background-color: var(--color-hover);
+  }
+
+  .locations-menu__icon--remove:hover {
+    color: #d44;
+  }
+}

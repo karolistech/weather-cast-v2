@@ -1,0 +1,129 @@
+.weather-current {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.weather-current__summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.weather-current__icon {
+  width: 96px;
+  height: 96px;
+}
+
+.weather-current__temp {
+  color: var(--color-value);
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.weather-current__condition {
+  color: var(--color-text);
+  font-size: 0.95rem;
+}
+
+.weather-current__ranges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.weather-current__range {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.weather-current__range-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.weather-current__range-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weather-current__range-label {
+  color: var(--color-label);
+  font-size: 0.9rem;
+}
+
+.weather-current__range-value {
+  color: var(--color-value);
+  font-weight: 500;
+}
+
+.weather-current__details {
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 1rem clamp(1rem, 5vw, 3rem);
+}
+
+.weather-current__detail {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.weather-current__detail-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.weather-current__detail-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.weather-current__detail-label {
+  color: var(--color-label);
+  font-size: 0.9rem;
+}
+
+.weather-current__detail-value {
+  color: var(--color-value);
+  font-weight: 500;
+}
+
+@media (min-width: 600px) {
+  .weather-current {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "summary ranges"
+      "details details";
+  }
+
+  .weather__current-summary {
+    grid-area: summary;
+  }
+
+  .weather-current__ranges {
+    grid-area: ranges;
+  }
+
+  .weather-current__details {
+    grid-area: details;
+    grid-template-columns: repeat(4, auto);
+    justify-self: center;
+  }
+
+  .weather-current__icon {
+    width: 124px;
+    height: 124px;
+  }
+
+  .weather-current__temp {
+    font-size: 2.5rem;
+  }
+}

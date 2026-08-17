@@ -1,0 +1,80 @@
+.settings-menu {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 2;
+}
+
+.settings-menu__btn {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--color-surface);
+  box-shadow: var(--color-shadow);
+}
+
+.settings-menu__btn-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--color-icon);
+}
+
+.settings-menu__settings {
+  position: absolute;
+  right: 100%;
+  bottom: 0;
+  min-width: 200px;
+  margin-right: 0.5rem;
+  box-shadow: var(--color-shadow);
+}
+
+.settings-menu__setting {
+  width: 100%;
+  padding: 0.75rem 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  background-color: var(--color-surface);
+}
+
+.settings-menu__setting-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--color-icon);
+}
+
+.settings-menu__setting-label {
+  color: var(--color-label);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+@media (min-width: 600px) {
+  .settings-menu {
+    position: relative;
+    right: auto;
+    bottom: auto;
+  }
+
+  .settings-menu__settings {
+    bottom: auto;
+    right: 0;
+    margin-right: 0;
+    margin-top: 0.75rem;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .settings-menu__btn:hover {
+    background-color: var(--color-hover);
+  }
+
+  .settings-menu__setting:hover {
+    background-color: var(--color-hover);
+  }
+}
