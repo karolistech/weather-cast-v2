@@ -46,14 +46,14 @@ export default function SearchBar() {
         type="search"
         className="search-bar__input"
         placeholder="Search for a location..."
-        // autoComplete="off"
+        autoComplete="off"
         value={query}
         onChange={handleSearch}
       />
 
       {query !== "" && (
         <button className="search-bar__btn" onClick={clearSearch}>
-          <svg className="search-bar__icon">
+          <svg className="search-bar__icon search-bar__icon--clear">
             <use href={`${sprite}#clear`} />
           </svg>
         </button>

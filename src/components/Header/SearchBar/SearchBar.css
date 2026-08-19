@@ -97,6 +97,10 @@
     background-color: var(--color-hover);
   }
 
+  .search-bar__icon--clear:hover {
+    color: #d44;
+  }
+
   .search-bar__location:hover {
     background-color: var(--color-hover);
   }

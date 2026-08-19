@@ -91,6 +91,7 @@
   color: var(--color-text);
   font-size: 0.9rem;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .locations-menu__saved {
@@ -128,6 +129,10 @@
 
   .locations-menu__icon--pin:hover {
     color: #1d5;
+  }
+
+  .locations-menu__pinned-name:hover {
+    background-color: var(--color-hover);
   }
 
   .locations-menu__saved-location:hover {

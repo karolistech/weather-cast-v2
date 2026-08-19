@@ -52,7 +52,7 @@ export default function LocationsMenu({ closeLocations }: LocationsMenuProps) {
         <div className="locations-menu__section">
           <h3 className="locations-menu__section-title">Pinned Location</h3>
 
-          <span className="locations-menu__pinned-name">
+          <span className="locations-menu__pinned-name" onClick={() => selectLocation(locations.pinned)}>
             {locations.pinned.name}
           </span>
         </div>
