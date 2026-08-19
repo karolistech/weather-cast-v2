@@ -9,8 +9,8 @@ type Locations = {
 
 const keys = {
   locations: "locations",
-  tempUnit: "tempUnit",
-  theme: "theme"
+  theme: "theme",
+  tempUnit: "tempUnit"
 };
 
 export const storage = {
@@ -24,16 +24,6 @@ export const storage = {
     return value === null ? null : JSON.parse(value);
   },
 
-  saveTempUnit(tempUnit: TempUnit) {
-    localStorage.setItem(keys.tempUnit, tempUnit);
-  },
-
-  loadTempUnit(): TempUnit | null {
-    const value = localStorage.getItem(keys.tempUnit);
-
-    return value === "celsius" || value === "fahrenheit" ? value : null;
-  },
-
   saveTheme(theme: Theme) {
     localStorage.setItem(keys.theme, theme);
   },
@@ -42,5 +32,15 @@ export const storage = {
     const value = localStorage.getItem(keys.theme);
 
     return value === "light" || value === "dark" ? value : null;
+  },
+
+  saveTempUnit(tempUnit: TempUnit) {
+    localStorage.setItem(keys.tempUnit, tempUnit);
+  },
+
+  loadTempUnit(): TempUnit | null {
+    const value = localStorage.getItem(keys.tempUnit);
+
+    return value === "celsius" || value === "fahrenheit" ? value : null;
   }
 };

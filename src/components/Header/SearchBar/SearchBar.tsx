@@ -32,7 +32,7 @@ export default function SearchBar() {
   }
 
   function handleSelectLocation(location: Location) {
-    selectLocation({ name: location.name, lat: location.lat, lon: location.lon });
+    selectLocation({ id: location.id, name: location.name, lat: location.lat, lon: location.lon });
     clearSearch();
   }
 

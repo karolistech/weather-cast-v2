@@ -12,7 +12,7 @@ type Action =
   | { type: "SELECT"; location: Location }
   | { type: "PIN" }
   | { type: "SAVE" }
-  | { type: "REMOVE"; index: number };
+  | { type: "REMOVE"; id: number };
 
 function locationsReducer(state: Locations | null, action: Action): Locations | null {
   if (action.type === "INIT") return action.locations;
@@ -26,10 +26,14 @@ function locationsReducer(state: Locations | null, action: Action): Locations | 
       return { ...state, pinned: state.current };
 
     case "SAVE":
+      const saved = state.saved.some(location => location.id === state.current.id);
+
+      if (saved === true) return state;
+
       return { ...state, saved: [...state.saved, state.current] };
 
     case "REMOVE":
-      return { ...state, saved: state.saved.filter((_, index) => index !== action.index) };
+      return { ...state, saved: state.saved.filter(location => location.id !== action.id) };
   }
 }
 
@@ -38,7 +42,7 @@ type LocationsContext = {
   selectLocation: (location: Location) => void;
   pinLocation: () => void;
   saveLocation: () => void;
-  removeLocation: (index: number) => void
+  removeLocation: (id: number) => void;
 };
 
 const LocationsContext = createContext<LocationsContext | null>(null);
@@ -87,7 +91,7 @@ export function LocationsProvider({ children }: { children: ReactNode }) {
     selectLocation: location => dispatch({ type: "SELECT", location: location }),
     pinLocation: () => dispatch({ type: "PIN" }),
     saveLocation: () => dispatch({ type: "SAVE" }),
-    removeLocation: index => dispatch({ type: "REMOVE", index })
+    removeLocation: id => dispatch({ type: "REMOVE", id })
   };
 
   return (

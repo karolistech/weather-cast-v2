@@ -61,15 +61,15 @@ export default function LocationsMenu({ closeLocations }: LocationsMenuProps) {
           <h3 className="locations-menu__section-title">Saved Locations</h3>
 
           <ul className="locations-menu__saved">
-            {locations.saved.map((location, index) => (
-              <li key={index} className="locations-menu__saved-location" onClick={() => selectLocation(location)}>
+            {locations.saved.map(location => (
+              <li key={location.id} className="locations-menu__saved-location" onClick={() => selectLocation(location)}>
                 <span className="locations-menu__saved-name">
                   {location.name}
                 </span>
 
                 <button
                   className="locations-menu__button"
-                  onClick={e => {e.stopPropagation(); removeLocation(index)}}
+                  onClick={e => {e.stopPropagation(); removeLocation(location.id)}}
                 >
                   <svg className="locations-menu__icon locations-menu__icon--remove">
                     <use href={`${sprite}#clear`} />
