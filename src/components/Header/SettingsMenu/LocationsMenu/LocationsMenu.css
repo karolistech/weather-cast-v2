@@ -96,8 +96,8 @@
 
 .locations-menu__saved {
   max-height: 250px;
-  padding-right: 0.25rem;
-  margin-right: -0.25rem;
+  padding-right: 0.5rem;
+  margin-right: -0.5rem;
   overflow-y: auto;
   display: flex;
   flex-direction: column;

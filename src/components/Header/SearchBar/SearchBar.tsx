@@ -46,7 +46,6 @@ export default function SearchBar() {
         type="search"
         className="search-bar__input"
         placeholder="Search for a location..."
-        autoComplete="off"
         value={query}
         onChange={handleSearch}
       />

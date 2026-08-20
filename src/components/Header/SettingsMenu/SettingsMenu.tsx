@@ -34,7 +34,7 @@ export default function SettingsMenu() {
 
       {settingsOpen && (
         <div className="settings-menu__settings">
-          <button className="settings-menu__setting" onClick={toggleTempUnit}>
+          <button className="settings-menu__setting-button" onClick={toggleTempUnit}>
             <svg className="settings-menu__setting-icon">
               <use href={`${sprite}#thermometer`} />
             </svg>
@@ -44,7 +44,7 @@ export default function SettingsMenu() {
             </span>
           </button>
 
-          <button className="settings-menu__setting" onClick={toggleTheme}>
+          <button className="settings-menu__setting-button" onClick={toggleTheme}>
             <svg className="settings-menu__setting-icon">
               <use href={`${sprite}#${theme === "light" ? "light-theme" : "dark-theme"}`} />
             </svg>
@@ -54,7 +54,7 @@ export default function SettingsMenu() {
             </span>
           </button>
 
-          <button className="settings-menu__setting" onClick={openLocations}>
+          <button className="settings-menu__setting-button" onClick={openLocations}>
             <svg className="settings-menu__setting-icon">
               <use href={`${sprite}#location`} />
             </svg>

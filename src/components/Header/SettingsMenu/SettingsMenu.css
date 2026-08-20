@@ -32,7 +32,7 @@
   box-shadow: var(--color-shadow);
 }
 
-.settings-menu__setting {
+.settings-menu__setting-button {
   width: 100%;
   padding: 0.75rem 0.5rem;
   display: flex;
@@ -40,6 +40,7 @@
   gap: 0.5rem;
   border: none;
   background-color: var(--color-surface);
+  font-family: inherit;
 }
 
 .settings-menu__setting-icon {
@@ -74,7 +75,7 @@
     background-color: var(--color-hover);
   }
 
-  .settings-menu__setting:hover {
+  .settings-menu__setting-button:hover {
     background-color: var(--color-hover);
   }
 }

@@ -5,10 +5,10 @@
 }
 
 .weather-daily__days {
+  padding-block: 0.5rem;
   display: flex;
   gap: 0.5rem;
   overflow-x: auto;
-  padding: 0.75rem 0.25rem;
 }
 
 .weather-daily__day {
@@ -59,10 +59,4 @@
 
 .weather-daily__metric-value {
   color: var(--color-value);
-}
-
-@media (min-width: 700px) {
-  .weather-daily__days {
-    justify-content: center;
-  }
 }

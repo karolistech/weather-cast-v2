@@ -104,7 +104,7 @@
       "details details";
   }
 
-  .weather__current-summary {
+  .weather-current__summary {
     grid-area: summary;
   }
 
@@ -124,6 +124,6 @@
   }
 
   .weather-current__temp {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
   }
 }
