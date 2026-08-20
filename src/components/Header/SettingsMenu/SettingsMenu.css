@@ -14,7 +14,6 @@
   border: none;
   border-radius: 50%;
   background-color: var(--color-surface);
-  -webkit-tap-highlight-color: transparent;
   box-shadow: var(--color-shadow);
 }
 
@@ -41,8 +40,13 @@
   gap: 0.5rem;
   border: none;
   background-color: var(--color-surface);
-  -webkit-tap-highlight-color: transparent;
   font-family: inherit;
+  touch-action: manipulation;
+}
+
+.settings-menu__setting-button:active {
+  touch-action: manipulation;
+  background-color: var(--color-hover);
 }
 
 .settings-menu__setting-icon {
@@ -77,7 +81,7 @@
     background-color: var(--color-hover);
   }
 
-  .settings-menu__setting-button:hover {
+  /* .settings-menu__setting-button:hover {
     background-color: var(--color-hover);
-  }
+  } */
 }

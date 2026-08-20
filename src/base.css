@@ -7,6 +7,7 @@
 :root {
   --color-background: #fafafa;
   --color-hover: #ddd;
+  --color-touch: rgba(250, 250, 250, 0.5);
   --color-icon: #222;
   --color-surface: #eee;
   --color-text: #222;
@@ -18,6 +19,7 @@
 :root[data-theme="dark"] {
   --color-background: #222;
   --color-hover: #333;
+  --color-touch: rgba(34, 34, 34, 0.5);
   --color-icon: #fafafa;
   --color-surface: #444;
   --color-text: #fafafa;
@@ -38,5 +40,6 @@ body {
 }
 
 button {
+  -webkit-tap-highlight-color: transparent;
   cursor: pointer;
 }

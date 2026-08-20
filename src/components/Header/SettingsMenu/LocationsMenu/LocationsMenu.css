@@ -89,6 +89,8 @@
   border-radius: 8px;
   background-color: var(--color-surface);
   color: var(--color-text);
+  -webkit-tap-highlight-color: var(--color-touch);
+  touch-action: manipulation;
   font-size: 0.9rem;
   font-weight: 500;
   cursor: pointer;
@@ -113,6 +115,8 @@
   padding: 0.5rem;
   border-radius: 8px;
   background-color: var(--color-surface);
+  -webkit-tap-highlight-color: var(--color-touch);
+  touch-action: manipulation;
   cursor: pointer;
 }
 
@@ -142,12 +146,4 @@
   .locations-menu__icon--remove:hover {
     color: #d44;
   }
-}
-
-.locations-menu__icon--save:active {
-  color: #f00;
-}
-
-.locations-menu__icon--pin:active {
-  color: #1d5;
 }
