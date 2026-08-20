@@ -143,3 +143,11 @@
     color: #d44;
   }
 }
+
+.locations-menu__icon--save:active {
+  color: #f00;
+}
+
+.locations-menu__icon--pin:active {
+  color: #1d5;
+}
