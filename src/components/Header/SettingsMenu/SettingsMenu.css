@@ -41,12 +41,6 @@
   border: none;
   background-color: var(--color-surface);
   font-family: inherit;
-  touch-action: manipulation;
-}
-
-.settings-menu__setting-button:active {
-  touch-action: manipulation;
-  background-color: var(--color-hover);
 }
 
 .settings-menu__setting-icon {
@@ -76,12 +70,22 @@
   }
 }
 
+@media (hover: none) and (pointer: coarse) {
+  .settings-menu__btn:active {
+    background-color: var(--color-hover);
+  }
+
+  .settings-menu__setting-button:active {
+    background-color: var(--color-hover);
+  }
+}
+
 @media (hover: hover) and (pointer: fine) {
   .settings-menu__btn:hover {
     background-color: var(--color-hover);
   }
 
-  /* .settings-menu__setting-button:hover {
+  .settings-menu__setting-button:hover {
     background-color: var(--color-hover);
-  } */
+  }
 }

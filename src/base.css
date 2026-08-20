@@ -39,7 +39,8 @@ body {
   font-family: Poppins, system-ui;
 }
 
-button {
-  -webkit-tap-highlight-color: transparent;
-  cursor: pointer;
+@media (hover: hover) and (pointer: fine) {
+  button {
+    cursor: pointer;
+  }
 }

@@ -89,11 +89,8 @@
   border-radius: 8px;
   background-color: var(--color-surface);
   color: var(--color-text);
-  -webkit-tap-highlight-color: var(--color-touch);
-  touch-action: manipulation;
   font-size: 0.9rem;
   font-weight: 500;
-  cursor: pointer;
 }
 
 .locations-menu__saved {
@@ -115,15 +112,30 @@
   padding: 0.5rem;
   border-radius: 8px;
   background-color: var(--color-surface);
-  -webkit-tap-highlight-color: var(--color-touch);
-  touch-action: manipulation;
-  cursor: pointer;
 }
 
 .locations-menu__saved-name {
   color: var(--color-text);
   font-size: 0.9rem;
   font-weight: 500;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .locations-menu__icon--save:active {
+    color: #f00;
+  }
+
+  .locations-menu__icon--pin:active {
+    color: #1d5;
+  }
+
+  .locations-menu__pinned-name:active {
+    background-color: var(--color-hover);
+  }
+
+  .locations-menu__saved-location:active {
+    background-color: var(--color-hover);
+  }
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -137,10 +149,12 @@
 
   .locations-menu__pinned-name:hover {
     background-color: var(--color-hover);
+    cursor: pointer;
   }
 
   .locations-menu__saved-location:hover {
     background-color: var(--color-hover);
+    cursor: pointer;
   }
 
   .locations-menu__icon--remove:hover {
