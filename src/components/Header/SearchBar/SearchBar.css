@@ -10,13 +10,11 @@
   background-color: var(--color-surface);
   color: var(--color-text);
   font-family: inherit;
-  font-size: 0.95rem;
-  font-weight: 400;
+  font-size: 1rem;
 }
 
 .search-bar__input::placeholder {
-  color: var(--color-text);
-  opacity: 0.8;
+  color: var(--color-label);
 }
 
 .search-bar__input::-webkit-search-cancel-button {
@@ -62,8 +60,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  cursor: pointer;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem;
 }
 
 .search-bar__location-flag {
@@ -100,6 +97,10 @@
 
   .search-bar__icon--clear:hover {
     color: #d44;
+  }
+
+  .search-bar__location {
+    cursor: pointer;
   }
 
   .search-bar__location:hover {

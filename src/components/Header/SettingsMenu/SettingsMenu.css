@@ -72,11 +72,11 @@
 
 @media (hover: none) and (pointer: coarse) {
   .settings-menu__btn:active {
-    background-color: var(--color-hover);
+    background-color: var(--color-touch);
   }
 
   .settings-menu__setting-button:active {
-    background-color: var(--color-hover);
+    background-color: var(--color-touch);
   }
 }
 

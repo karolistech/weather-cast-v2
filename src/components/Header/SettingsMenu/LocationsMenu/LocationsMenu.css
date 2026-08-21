@@ -1,7 +1,7 @@
 .locations-menu__backdrop {
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -79,7 +79,7 @@
   font-weight: 500;
 }
 
-.locations-menu__actions {
+.locations-menu__current-actions {
   display: flex;
   gap: 0.5rem;
 }
@@ -130,11 +130,11 @@
   }
 
   .locations-menu__pinned-name:active {
-    background-color: var(--color-hover);
+    background-color: var(--color-touch);
   }
 
   .locations-menu__saved-location:active {
-    background-color: var(--color-hover);
+    background-color: var(--color-touch);
   }
 }
 
@@ -147,14 +147,20 @@
     color: #1d5;
   }
 
+  .locations-menu__pinned-name {
+    cursor: pointer;
+  }
+
   .locations-menu__pinned-name:hover {
     background-color: var(--color-hover);
+  }
+
+  .locations-menu__saved-location {
     cursor: pointer;
   }
 
   .locations-menu__saved-location:hover {
     background-color: var(--color-hover);
-    cursor: pointer;
   }
 
   .locations-menu__icon--remove:hover {

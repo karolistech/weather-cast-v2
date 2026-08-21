@@ -7,7 +7,7 @@ type ApiIpResponse = {
   longitude: number;
 };
 
-const url = "https://apiip.net/api/check?&accessKey=d9e9de8a-6d77-4934-8db0-a7e944865788";
+// const url = "https://apiip.net/api/check?&accessKey=d9e9de8a-6d77-4934-8db0-a7e944865788";
 
 export async function fetchLocation(): Promise<Location> {
   const response = await fetch(url);

@@ -33,7 +33,7 @@ export default function LocationsMenu({ closeLocations }: LocationsMenuProps) {
               {locations.current.name}
             </span>
 
-            <div className="locations-menu__actions">
+            <div className="locations-menu__current-actions">
               <button className="locations-menu__button" onClick={saveLocation}>
                 <svg className="locations-menu__icon locations-menu__icon--save">
                   <use href={`${sprite}#save`} />
