@@ -34,9 +34,17 @@
   padding: 0;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   background-color: var(--color-background);
   font-family: Poppins, system-ui;
+}
+
+body:has(.locations-menu) {
+  overflow: hidden;
 }
 
 button {
